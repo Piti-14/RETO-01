@@ -1,0 +1,5 @@
+<!ELEMENT GruposProfesionales (Grupo+)>
+    <!ELEMENT Grupo (Numero, Formacion+, SalarioBase)>
+        <!ELEMENT Numero (#PCDATA)>
+        <!ELEMENT Formacion (#PCDATA)>
+        <!ELEMENT SalarioBase (#PCDATA)>
