@@ -8,7 +8,7 @@ public class Modificaciones {
 
     }
 
-    public void datosEmpresariales () {
+    public void datsEmpresariales () {
 
     }
 }
