@@ -8,7 +8,7 @@ public class Consultas {
 
     }
 
-    public void datosPersonales (int ID){//Se puede hacer sin autonumérico, pidiendo cuenta y NIF
+    public void datosPersonales (String DNI, String cuenta){//Se puede hacer sin autonumérico, pidiendo cuenta y NIF
 
     }
 
