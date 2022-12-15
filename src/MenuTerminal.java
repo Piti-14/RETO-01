@@ -1,3 +1,5 @@
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -15,9 +17,28 @@ public class MenuTerminal {
 
     public static Scanner input = new Scanner(System.in);
 
-    public static void main(String[] args) {
+    public static String fichero;
 
-        menuPrincipal();
+    public static void main(String[] args) throws IOException {
+
+        /*menuPrincipal();
+        fichero = "./RETO-01/recursos/DatosEmpresa.csv";
+        String [][] matriz = new String[0][0];
+        LectorCSV lector = new LectorCSV();
+        lector.crearMatriz(fichero);
+        lector.leerCSV(fichero);
+
+        menuPrincipal();*/
+        fichero = "./RETO-01/recursos/DatosEmpresa.csv";
+        LectorCSV lector = new LectorCSV();
+        lector.crearMatriz(fichero);
+        lector.leerCSV(fichero);
+
+        //Consultas consultaPiti = new Consultas();
+        //consultaPiti.trabajadoresPorDepartamento("3");
+
+        //
+
     }
 
     private static int menuPrincipal() {

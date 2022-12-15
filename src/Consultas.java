@@ -4,6 +4,9 @@
 
 public class Consultas {
 
+    public static final String RUTA = "./RETO-01/recursos/";
+    private static String[][] m;
+
     public void datosPersonales (String dni){
 
     }
@@ -12,11 +15,30 @@ public class Consultas {
 
     }
 
-    public void trabajadores (int dept){
+    public void trabajadoresPorDepartamento (String dept) throws IOException {
+
+        LectorCSV lector = new LectorCSV();
+        lector.crearMatriz(RUTA + "Empleado.csv");
+        m = lector.leerCSV(RUTA + "Empleado.csv");
+
+        for (int i = 1; i < m.length; i++) {
+            if (m[i][(m[i].length - 1)].compareTo(dept)==0){
+                System.out.println(m[i][7]);
+                //System.out.println(matriz[i]);
+            }
+        }
+
+
+
+        /*for (int i = 0; i < matriz.length; i++){
+            for (int j = 0; j < matriz[i].length; j++) {
+
+            }
+        }*/
 
     }
 
-    public void trabajadores (String cat){
+    public void trabajadoresPorCategoria (String cat){
 
     }
 

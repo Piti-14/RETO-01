@@ -1,6 +1,7 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Arrays;
 
 /**
  * @author Jorge Pitarch
@@ -9,8 +10,9 @@ import java.io.IOException;
 public class LectorCSV {
 
     public static final String SEPARADOR = ";" ;
-    public static String[][] matriz;
+
     public static BufferedReader lectura = null;
+    public static String[][] matriz;
 
     public void crearMatriz(String archivo) throws IOException {//sacar el  tamaño de la matriz de los datos del csv
 
@@ -29,23 +31,40 @@ public class LectorCSV {
 
         matriz = new String[filas][columnas];
         lectura.close();
+
     }
 
-    public void leerCSV (String archivo) throws IOException {//almacenar el csv en la matriz
+    public String[][] leerCSV (String archivo) throws IOException {//almacenar el csv en la matriz
 
         lectura = new BufferedReader(new FileReader(archivo));
 
         String linea = lectura.readLine();
 
-        for (int i = 0; i < matriz[0].length; i++){
-            for (int j = 0; j < matriz[0][0].length(); j++) {
+        for (int i = 0; i < matriz.length; i++){
+            for (int j = 0; j < matriz[i].length; j++) {
 
+                matriz[i][j] = Arrays.toString(linea.split(SEPARADOR));
+                System.out.println(matriz[i][j]);
+
+                linea = lectura.readLine();
+            }
+
+            if (linea == null){
+                break;
             }
         }
+        lectura.close();
 
-        /*while (linea != null) {
-            matriz[0] = linea.split(SEPARADOR);
-
-        }*/
+        return matriz;
     }
+
+    //public void consultarDato (String)
+    /*public void limpiarMatriz(){
+
+        for (int i = 0; i < matriz.length; i++){
+            for (int j = 0; j < matriz[i].length; j++) {
+                matriz[i][j] = null;
+            }
+        }
+    }*/
 }
