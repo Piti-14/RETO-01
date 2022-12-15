@@ -4,11 +4,11 @@
 
 public class Eliminaciones {
 
-    public void eliminarCascada (int dept) {
+    public void eliminarCascada (String dept) {
 
     }
 
-    public void eliminarConIntegridadReferencial (int dept) {
+    public void eliminarConIntegridadReferencial (String dept) {
 
     }
 }

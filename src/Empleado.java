@@ -4,7 +4,7 @@
  *
  */
 
-public class Trabajador{
+public class Empleado{
 
 
     

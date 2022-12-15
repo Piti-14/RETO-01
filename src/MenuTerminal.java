@@ -21,6 +21,12 @@ public class MenuTerminal {
 
     public static void main(String[] args) throws IOException {
 
+
+
+        //PASO1 - cargarFicherosCSV
+        //PASO 2 - MenuPrincipal
+        //PASO 3 - Cargar la opcion adecuada
+
         /*menuPrincipal();
         fichero = "./RETO-01/recursos/DatosEmpresa.csv";
         String [][] matriz = new String[0][0];

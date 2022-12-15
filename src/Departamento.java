@@ -4,8 +4,6 @@
  */
 public class Departamento {
 
-
-
     private int numero;
     private String nombre;
 

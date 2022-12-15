@@ -18,12 +18,12 @@ public class Consultas {
     public void trabajadoresPorDepartamento (String dept) throws IOException {
 
         LectorCSV lector = new LectorCSV();
-        lector.crearMatriz(RUTA + "Empleado.csv");
-        m = lector.leerCSV(RUTA + "Empleado.csv");
+        lector.crearMatriz(RUTA + "Empleados.csv");
+        m = lector.leerCSV(RUTA + "Empleados.csv");
 
         for (int i = 1; i < m.length; i++) {
-            if (m[i][(m[i].length - 1)].compareTo(dept)==0){
-                System.out.println(m[i][7]);
+            if (m[i][(m[i].length - 1)].compareTo(dept) == 0){
+                System.out.println(m[i][m[i].length - 1]);
                 //System.out.println(matriz[i]);
             }
         }
@@ -54,7 +54,7 @@ public class Consultas {
 
     }
 
-    public void horasExtraDepartamento (int dept){
+    public void horasExtraDepartamento (String dept){
 
     }
 }

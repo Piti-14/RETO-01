@@ -4,15 +4,13 @@
  *
  */
 public class GrupoCotizacion {
-    
-
 
     private String nombre;
     private String numero;
     private String formacion;
-    private double salarioBase;
+    private String salarioBase;
 
-    public GrupoCotizacion(String nombre, String numero, String formacion, double salarioBase){
+    public GrupoCotizacion(String nombre, String numero, String formacion, String salarioBase){
 
         this.setNombre(nombre);
         this.setNumero(numero);
