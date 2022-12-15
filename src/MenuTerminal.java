@@ -23,28 +23,6 @@ public class MenuTerminal {
 
 
 
-        //PASO1 - cargarFicherosCSV
-        //PASO 2 - MenuPrincipal
-        //PASO 3 - Cargar la opcion adecuada
-
-        /*menuPrincipal();
-        fichero = "./RETO-01/recursos/DatosEmpresa.csv";
-        String [][] matriz = new String[0][0];
-        LectorCSV lector = new LectorCSV();
-        lector.crearMatriz(fichero);
-        lector.leerCSV(fichero);
-
-        menuPrincipal();*/
-        fichero = "./RETO-01/recursos/DatosEmpresa.csv";
-        LectorCSV lector = new LectorCSV();
-        lector.crearMatriz(fichero);
-        lector.leerCSV(fichero);
-
-        //Consultas consultaPiti = new Consultas();
-        //consultaPiti.trabajadoresPorDepartamento("3");
-
-        //
-
     }
 
     private static int menuPrincipal() {
@@ -92,6 +70,6 @@ public class MenuTerminal {
         opcion = input.nextInt();
         input.nextLine();
 
-        return opcion;
+        return selector(opcion);
     }
 }
