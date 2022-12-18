@@ -1,33 +1,31 @@
-
 /**
  * @author Jorge Pitarch
- *
+ * colaborador George Popa
  */
 
-public class Empleado{
+public class Empleado {
 
-
-    
+    private int ID;
     private String NIF;
     private String nombre;
     private String apellido1;
     private String apellido2;
     private String cuenta;
-    private int Antiguedad;
     private String numSS;
-    private String categoria;
-    private String grupo;
     private String email;
+    private int departamento;
 
-    public Trabajador(String NIF, String nombre, String apellido1, String apellido2,
-     String cuenta, int Antiguedad, String numSS, String categoria, String grupo, String email){
+    public Empleado(int ID, String NIF, String nombre, String apellido1, String apellido2,
+                    String cuenta, String numSS, String email, int departamento) {
 
-        this.setNIF(NIF);                 this.setNombre(nombre);       this.setApellido1(apellido1);
-        this.setApellido2(apellido2);     this.setCuenta(cuenta);       this.setAntiguedad(Antiguedad);
-        this.setNumSS(numSS);             this.setCategoria(categoria); this.setGrupo(grupo);
-        this.setEmail(email);
-
+        this.ID = ID;                 this.NIF = NIF;                 this.nombre = nombre;
+        this.apellido1 = apellido1;   this.apellido2 = apellido2;     this.cuenta = cuenta;
+        this.numSS = numSS;           this.email = email;             this.departamento = departamento;
     }
+
+    public int getDepartamento() { return departamento; }
+
+    public void setDepartamento(int departamento) { this.departamento = departamento; }
 
     public String getEmail() {
         return email;
@@ -37,36 +35,12 @@ public class Empleado{
         this.email = email;
     }
 
-    public String getGrupo() {
-        return grupo;
-    }
-
-    public void setGrupo(String grupo) {
-        this.grupo = grupo;
-    }
-
-    public String getCategoria() {
-        return categoria;
-    }
-
-    public void setCategoria(String categoria) {
-        this.categoria = categoria;
-    }
-
     public String getNumSS() {
         return numSS;
     }
 
     public void setNumSS(String numSS) {
         this.numSS = numSS;
-    }
-
-    public int getAntiguedad() {
-        return Antiguedad;
-    }
-
-    public void setAntiguedad(int antiguedad) {
-        this.Antiguedad = antiguedad;
     }
 
     public String getCuenta() {
@@ -105,8 +79,28 @@ public class Empleado{
         return NIF;
     }
 
-    public void setNIF(String nIF) {
-        this.NIF = nIF;
+    public void setNIF(String NIF) {
+        this.NIF = NIF;
     }
 
+    public int getID() { return ID; }
+
+    public void setID(int ID) { this.ID = ID; }
+
+    @Override
+    public String toString() {
+        /**
+         * autor Jorge Pitarch
+         */
+        return "{ID: " + ID + ", NIF: " + NIF + ", Nombre: " + nombre + ", Primer apellido: " + apellido1 + ", Segundo apellido: " + apellido2 + ", Cuenta: " + cuenta +
+                ", Nº Seguridad Social: " + numSS + ", Correo: " + email + ", Departamento: " + departamento + "}";
+    }
+
+    public String toStringCSV() {
+        /**
+         * autor Jorge Pitarch
+         */
+        return Integer.toString(ID) + ";" + NIF + ";" + nombre + ";" + apellido1 + ";" +
+                apellido2 + ";" + cuenta + ";" + numSS + ";" + email + ";" + Integer.toString(departamento);
+    }
 }
